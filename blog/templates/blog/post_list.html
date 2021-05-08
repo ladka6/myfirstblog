@@ -6,13 +6,16 @@
         <div>
             <h1><a href="/">BLOG</a></h1>
         </div>
+
+        {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Blog Entry 1</a></h2>
-            <p>Test</p>
+
+            <p>published: {{post.published_date}}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
             <p>Test</p>
         </div>
-
+        {% endfor %}
         <div>
             <p>published: 14.06.2014, 12:20</p>
             <h2><a href="">Blog Entry 2</a></h2>
